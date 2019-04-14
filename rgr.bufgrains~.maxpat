@@ -44,7 +44,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 485.0, 686.0, 182.642822000000024, 47.0 ],
+					"patching_rect" : [ 485.0, 686.0, 186.0, 47.0 ],
 					"text" : "Not sure why we need to do this, but it brings the level back down to match (e.g. play~)"
 				}
 
@@ -262,7 +262,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 84.0, 401.0, 50.0, 22.0 ],
-									"text" : "4096"
+									"text" : "0"
 								}
 
 							}
@@ -630,6 +630,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-2",
@@ -638,7 +639,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 230.0, 479.0, 50.0, 22.0 ],
-									"text" : "176400"
+									"text" : "0."
 								}
 
 							}
@@ -697,8 +698,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 196.0, 405.0, 83.0, 22.0 ],
-									"text" : "getattr samps"
+									"patching_rect" : [ 196.0, 405.0, 67.0, 22.0 ],
+									"text" : "getattr size"
 								}
 
 							}
@@ -733,8 +734,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "float", "bang" ],
-									"patching_rect" : [ 286.357177999999976, 453.666687000000024, 126.0, 22.0 ],
-									"text" : "buffer~ #2"
+									"patching_rect" : [ 286.357177999999976, 453.666687000000024, 63.0, 22.0 ],
+									"text" : "buffer~ #1"
 								}
 
 							}
@@ -833,7 +834,7 @@
 								"patchline" : 								{
 									"color" : [ 1.0, 0.501961, 0.0, 1.0 ],
 									"destination" : [ "obj-39", 0 ],
-									"midpoints" : [ 237.5, 439.833344000000011, 295.857177999999976, 439.833344000000011 ],
+									"midpoints" : [ 229.5, 439.833344000000011, 295.857177999999976, 439.833344000000011 ],
 									"source" : [ "obj-46", 1 ]
 								}
 
@@ -1460,7 +1461,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 189.0, 763.999999999999886, 129.0, 60.0 ],
-									"presentation_linecount" : 4,
 									"text" : "Grab from buffer in ms, so that we work properly with different sample rates"
 								}
 
@@ -1473,7 +1473,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 648.25, 480.166687000000024, 129.0, 47.0 ],
-									"presentation_linecount" : 3,
 									"text" : "Figure out if we're going backwards - if so, reverse the ramp"
 								}
 
@@ -1486,7 +1485,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 202.0, 408.666687000000024, 127.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "Ramp is ms indices of samples to grab"
 								}
 
@@ -1520,7 +1518,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 202.0, 370.666687000000024, 127.0, 20.0 ],
-									"presentation_linecount" : 5,
 									"text" : "Add start time to ramp"
 								}
 
@@ -2494,7 +2491,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-24",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2506,7 +2503,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-33",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2542,11 +2539,11 @@
 				"box" : 				{
 					"comment" : "Pan (-1 to 1, 0 = centre)",
 					"id" : "obj-13",
-					"index" : 6,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 409.74929800000001, 147.666655999999989, 30.0, 30.0 ]
 				}
 
@@ -2555,11 +2552,11 @@
 				"box" : 				{
 					"comment" : "Length (ms)",
 					"id" : "obj-12",
-					"index" : 5,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 375.978637999999989, 147.666655999999989, 30.0, 30.0 ]
 				}
 
@@ -2568,11 +2565,11 @@
 				"box" : 				{
 					"comment" : "Amplitude",
 					"id" : "obj-11",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 342.208008000000007, 147.666655999999989, 30.0, 30.0 ]
 				}
 
@@ -2581,11 +2578,11 @@
 				"box" : 				{
 					"comment" : "Detune (1 = original pitch, 0.5 = ocatve down)",
 					"id" : "obj-10",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.437346999999988, 147.666655999999989, 30.0, 30.0 ]
 				}
 
@@ -2594,11 +2591,11 @@
 				"box" : 				{
 					"comment" : "Position (ms)",
 					"id" : "obj-9",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 274.666687000000024, 147.666655999999989, 30.0, 30.0 ]
 				}
 
@@ -2607,7 +2604,7 @@
 				"box" : 				{
 					"comment" : "Trigger on non-zero signal",
 					"id" : "obj-8",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2981,7 +2978,117 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "fl.audiotrigger~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.audiotrigger~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.source~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.source~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.times~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.sink~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.sink~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "otg.sigfloat~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.read~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.frommax~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.map~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.clip~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.pack~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.minus~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.unpack~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.ramp~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.tag~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.copysign~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.abs~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.select~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.route~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.reverse~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.plus~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.modulo~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.divide~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.samplerate~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "fl.tomax~.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
